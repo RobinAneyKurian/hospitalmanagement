@@ -6,6 +6,15 @@ Contact
 
 {% block content %}
 
-<h1>Contact Page</h1>
+<h1 class="text-center">Contact Page</h1>
+<hr>
+
+<div class="container text-center">
+    {% for con in con_num %}
+    <div class="alert alert-primary" role="alert">
+        <h3>{{con.hos_con_dept}}: {{con.hos_con_num}}</h3>
+      </div>
+      {% endfor %}
+</div>
 
 {% endblock %}

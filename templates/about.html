@@ -6,6 +6,21 @@ About
 
 {% block content %}
 
-<h1>About Page</h1>
+{% load static %}
+
+<h1 class="text-center my-3">ROBINS Multispeciality Hospital</h1>
+<hr>
+
+
+<div class="container">
+    {% for hos in about_hospital %}
+    <div>
+        <img src="{{hos.abt_hos_img.url}}" class="img-fluid" alt="...">
+    </div>
+    <p class="my-3">{{hos.abt_hos_description}}</p>
+    {% endfor %}
+</div>
+
+
 
 {% endblock %}
