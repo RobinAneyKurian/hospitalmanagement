@@ -6,6 +6,27 @@ Doctors
 
 {% block content %}
 
-<h1>Doctors Page</h1>
+<h1 class="text-center">Our Doctors</h1>
+<hr>
+
+<div class="container text-center bg-light my-2">
+
+    {% for d in doctors %}
+
+    <div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block">
+        <img src="{{d.doc_img.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{d.doc_name}}</h5>
+          <p class="card-text">{{d.doc_spec}}</p>
+          <h6 class="card-text text-center">{{d.dep_name}}</h6>
+          <p class="card-text">{{d.doc_description}}</p>
+        </div>
+      </div>
+
+    {% endfor %}
+
+</div>
+
+
 
 {% endblock %}
